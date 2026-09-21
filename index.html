@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery - Home</title>
+    <!-- Google Fonts: Playfair Display & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="bakery-logo_c.png" alt="North Star Bakery logo" width="250">
+        <h1>North Star Bakery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to North Star Bakery</h2>
+            <p>Guiding you to delicious, fresh-baked sourdough, artisanal pastries, and handcrafted treats baked fresh every morning.</p>
+        </section>
+
+        <!-- Responsive Image using <picture> element -->
+        <section>
+            <h2>Featured Fresh Bakes</h2>
+            <picture>
+                <source media="(min-width: 800px)" srcset="bakery-feature-large_c.png">
+                <img src="bakery-feature-small_c.png" alt="Featured artisan bread spread from North Star Bakery">
+            </picture>
+        </section>
+
+        <!-- Storefront Overview -->
+        <section>
+            <h2>Visit Our Bakery</h2>
+            <img src="bakery-storefront_c.png" alt="Exterior storefront of North Star Bakery">
+            <p>Stop by our store to experience the aroma of freshly baked goods and pick up your daily favorites.</p>
+        </section>
+
+        <!-- Welcome Voice Message -->
+        <section>
+            <h2>Welcome Message</h2>
+            <audio controls preload="auto">
+                <source src="bakery-welcome_c.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

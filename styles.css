@@ -1,0 +1,211 @@
+/* ==========================================
+   1. DESIGN SYSTEM & CSS VARIABLES
+   ================================---------- */
+:root {
+  --bg-color: #FDFBF7;       /* Soft Cream */
+  --text-color: #3E2723;     /* Dark Espresso / Warm Brown */
+  --accent-color: #D77A61;   /* Warm Terracotta */
+  --card-bg: #FFFFFF;        /* Pure White for cards */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+/* Base Styles (Mobile-First) */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   2. HEADER & NAVIGATION (Flexbox)
+   ================================---------- */
+header {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  gap: 0.5rem;
+}
+
+nav a {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent-color);
+}
+
+/* ==========================================
+   3. LAYOUT & SECTIONS (Flexbox)
+   ================================---------- */
+main {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+section, article {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(62, 39, 35, 0.05);
+}
+
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--text-color);
+}
+
+/* Form Controls & Fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  margin-top: 0.25rem;
+}
+
+button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #c46850;
+}
+
+/* Interactive Component Styles */
+.error-message {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.feature-section {
+  background-color: #f7f3eb;
+  border: 1px dashed var(--accent-color);
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.interest-btn {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.interest-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.selection-feedback {
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.success-banner {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #eef8f8;
+  border: 1px solid #2b7a78;
+  color: #2b7a78;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   4. RESPONSIVE MEDIA QUERY (Larger Screens)
+   ================================---------- */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  nav ul {
+    flex-direction: row; /* Switch navigation to horizontal row */
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 2rem 4rem;
+  }
+}

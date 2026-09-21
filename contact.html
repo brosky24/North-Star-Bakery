@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - North Star Bakery</title>
+    <!-- Google Fonts: Playfair Display & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="bakery-logo_c.png" alt="North Star Bakery logo" width="250">
+        <h1>Contact North Star Bakery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Interactive Feature Section (Touchstone 4 Requirement) -->
+        <section id="interactive-feature" class="feature-section">
+            <h2>Quick Inquiry Preference</h2>
+            <p>Select your primary interest to customize your experience:</p>
+            <div class="button-group">
+                <button type="button" class="interest-btn" data-interest="Custom Cakes">Custom Cakes</button>
+                <button type="button" class="interest-btn" data-interest="Catering">Catering</button>
+                <button type="button" class="interest-btn" data-interest="General">General Inquiry</button>
+            </div>
+            <p id="selectionFeedback" class="selection-feedback"></p>
+        </section>
+
+        <section>
+            <h2>Get in Touch</h2>
+            <p>We would love to hear from you! Please send us a message using the form below.</p>
+
+            <!-- Form with id for JS validation handling -->
+            <form id="contactForm" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    
+                    <p>
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname">
+                        <span id="fullnameError" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email">
+                        <span id="emailError" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                        <span id="phoneError" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="5" cols="40"></textarea>
+                        <span id="messageError" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <button type="submit" id="submitBtn">Submit Inquiry</button>
+                    </p>
+                </fieldset>
+            </form>
+            <div id="formSuccessMessage" class="success-banner" style="display: none;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
